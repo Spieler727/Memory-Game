@@ -1,0 +1,71 @@
+#card-medium {
+    position: relative;
+}
+
+#card-medium img {
+    width: 60%;
+    height: 97%;
+    border: 2px solid gold;
+}
+
+@media screen and (min-width:2400px) {
+    #card-medium img {
+        width:25%;
+    }
+}
+@media screen and (min-width:2000px) and (max-width:2400px) {
+    #card-medium img {
+        width: 27%;
+    }
+}
+@media screen and (min-width:1400px) and (max-width:2000px) {
+    #card-medium img {
+        width: 33.5%;
+    }
+}
+@media screen and (min-width:900px) and (max-width:1400px) {
+    #card-medium img {
+        width: 50%;
+    }
+}
+
+@media screen and (min-width:500px) and (max-width:900px) {
+    #card-medium img {
+        width: 60%;
+    }
+}
+@media screen and (max-width:500px) {
+    #card-medium img {
+        width: 70%;
+    }
+}
+#card-medium .front {
+    transform: rotateY(90deg);
+    position:absolute;
+    transition: all ease-in 0.2s;
+}
+
+
+#card-medium .flipped .front {
+    transform: rotateY(0deg);
+    transition-delay: 0.2s;
+}
+
+#card-medium .back {
+    transition: all ease-in 0.2s;
+    transition-delay: 0.2s;
+}
+@media screen and (max-width:850px) {
+    #card-medium .front {
+        height:95%;
+    }
+}
+@media screen and (max-width:500px) {
+    #card-medium .front {
+        height:89%;
+    }
+}
+#card-medium .flipped .back {
+    transform: rotateY(90deg);
+    transition-delay: 0s;
+}
