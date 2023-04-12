@@ -1,38 +1,110 @@
+@font-face {
+  font-family: 'script';
+  src: url(/public/fonts/AnandaBlackPersonalUseRegular-rg9Rx.ttf) format('truetype');
+}
 .App {
+  width:100%;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.heading h1 {
+  font-family: "script";
+  font-size: 55px;
+  color:aliceblue;
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.game-options {
+  margin: 0 auto;
+  margin-left: 40px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap:0px;
 }
 
-.App-link {
-  color: #61dafb;
+.game-options button {
+  margin-top: 10px;
+  background: none;
+  border: 2px solid aliceblue;
+  padding: 10px 20px;
+  border-radius: 4px;
+  color:aliceblue;
+  font-size: 19px;
+  font-weight: bold;
+  cursor: pointer;
+}
+@media screen and (max-width:500px) {
+  .game-options button {
+    margin-top: 17px;
+    padding: 0px 20px;
+  }
+}
+.reset-button:hover {
+  background-color: rgba(59, 118, 228, 0.8);
+  
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.difficulty-section button {
+  margin-top:9.3px;
+  border:none;
+}
+.difficulty-section button:hover {
+  background-color: none;
+  cursor: default;
+}
+
+.difficulty-section select{
+  margin-left: 3px;
+  font-size: 19px;
+  color: aliceblue;
+  background-color: transparent;
+  border: 2px solid aliceblue;
+  cursor: pointer;
+}
+select:focus {
+  outline:aliceblue;
+  background-color: transparent;
+}
+select option {
+  background:transparent;
+  color: goldenrod;
+}
+
+.game-stats p {
+  margin-top: 10px;
+  font-size: 22px;
+  color:aliceblue;
+}
+
+#card-grid-easy {
+  width:100%;
+  height:100%;
+  margin-top: 40px;
+
+  display:grid;
+  grid-template-columns: repeat(4, 25%);
+  grid-template-rows: repeat(3, 33%);
+  row-gap: 10px;
+}
+
+#card-grid-medium {
+  width:100%;
+  height:100%;
+  margin-top: 40px;
+
+  display:grid;
+  grid-template-columns: repeat(4, 25%);
+  grid-template-rows: repeat(4, 25%);
+  row-gap: 0px;
+}
+
+#card-grid-hard {
+  width:100%;
+  height:100%;
+  margin-top: 40px;
+
+  display:grid;
+  grid-template-columns: repeat(5, 20%);
+  grid-template-rows: repeat(4, 25%);
+  row-gap: 0px;
 }

@@ -1,0 +1,50 @@
+#card-easy {
+    position: relative;
+}
+
+#card-easy img {
+    width: 60%;
+    height: 97%;
+    border: 2px solid gold;
+}
+
+@media screen and (min-width:2000px) {
+    #card-easy img {
+        width:33%;
+    }
+}
+@media screen and (min-width:1400px) and (max-width:2000px) {
+    #card-easy img {
+        width: 41%;
+    }
+}
+#card-easy .front {
+    transform: rotateY(90deg);
+    position:absolute;
+    transition: all ease-in 0.2s;
+}
+
+
+#card-easy .flipped .front {
+    transform: rotateY(0deg);
+    transition-delay: 0.2s;
+}
+
+#card-easy .back {
+    transition: all ease-in 0.2s;
+    transition-delay: 0.2s;
+}
+@media screen and (max-width:850px) {
+    #card-easy .front {
+        height:95%;
+    }
+}
+@media screen and (max-width:500px) {
+    #card-easy .front {
+        height:89%;
+    }
+}
+#card-easy .flipped .back {
+    transform: rotateY(90deg);
+    transition-delay: 0s;
+}
